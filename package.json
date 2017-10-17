@@ -1,0 +1,33 @@
+{
+  "name": "node-dev",
+  "version": "1.0.0",
+  "description": "NodeJs Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/server.js",
+    "test": "mocha test",
+    "nodemon": "nodemon --config nodemon.json --exec npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/couchjanus/node-dev.git"
+  },
+  "keywords": [
+    "node",
+    "javascript"
+  ],
+  "author": "couchjanus <couchjanus@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/couchjanus/node-dev/issues"
+  },
+  "homepage": "https://github.com/couchjanus/node-dev#readme",
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "jshint": "^2.9.5",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1"
+  }
+}

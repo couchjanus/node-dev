@@ -1,0 +1,328 @@
+Statistical profiling result from isolate-0x3f8a1f0-v8.log, (89 ticks, 6 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+      3    3.4%          /lib/x86_64-linux-gnu/libc-2.19.so
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    1.1%    1.2%  StoreIC: A store IC from the snapshot
+      1    1.1%    1.2%  Function: ~NativeModule.exists bootstrap_node.js:550:33
+      1    1.1%    1.2%  Function: ~<anonymous> assert.js:1:11
+      1    1.1%    1.2%  Builtin: InterpreterEntryTrampoline
+
+ [C++]:
+   ticks  total  nonlib   name
+     31   34.8%   36.0%  node::(anonymous namespace)::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      9   10.1%   10.5%  write
+      3    3.4%    3.5%  v8::internal::Deserializer::ReadData(v8::internal::Object**, v8::internal::Object**, int, unsigned char*)
+      2    2.2%    2.3%  node::Binding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    2.2%    2.3%  _IO_vfprintf
+      1    1.1%    1.2%  v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterTransfer(v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo*, v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo*)
+      1    1.1%    1.2%  v8::internal::interpreter::BytecodeRegisterOptimizer::Flush()
+      1    1.1%    1.2%  v8::internal::interpreter::BytecodeGenerator::BuildLogicalTest(v8::internal::Token::Value, v8::internal::Expression*, v8::internal::Expression*)
+      1    1.1%    1.2%  v8::internal::interpreter::BytecodeArrayWriter::MaybeElideLastBytecode(v8::internal::interpreter::Bytecode, bool) [clone .part.57]
+      1    1.1%    1.2%  v8::internal::TransitionArray::SearchTransition(v8::internal::Map*, v8::internal::PropertyKind, v8::internal::Name*, v8::internal::PropertyAttributes)
+      1    1.1%    1.2%  v8::internal::Scope::num_parameters() const
+      1    1.1%    1.2%  v8::internal::Scope::LookupRecursive(v8::internal::VariableProxy*, v8::internal::Scope*)
+      1    1.1%    1.2%  v8::internal::Scanner::ScanIdentifierOrKeyword()
+      1    1.1%    1.2%  v8::internal::Scanner::PeekAhead()
+      1    1.1%    1.2%  v8::internal::Scanner::CurrentSymbol(v8::internal::AstValueFactory*) const
+      1    1.1%    1.2%  v8::internal::ParserBase<v8::internal::Parser>::ParseUnaryExpression(bool*)
+      1    1.1%    1.2%  v8::internal::ParserBase<v8::internal::Parser>::ParsePrimaryExpression(bool*, bool*)
+      1    1.1%    1.2%  v8::internal::ParserBase<v8::internal::Parser>::ParseAssignmentExpression(bool, bool*)
+      1    1.1%    1.2%  v8::internal::ParserBase<v8::internal::Parser>::Expect(v8::internal::Token::Value, bool*)
+      1    1.1%    1.2%  v8::internal::Object::AddDataProperty(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::ShouldThrow, v8::internal::Object::StoreFromKeyed)
+      1    1.1%    1.2%  v8::internal::LookupIterator::State v8::internal::LookupIterator::LookupInRegularHolder<false>(v8::internal::Map*, v8::internal::JSReceiver*) [clone .part.72]
+      1    1.1%    1.2%  v8::internal::KeyedLoadIC::Load(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>) [clone .constprop.211]
+      1    1.1%    1.2%  v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+      1    1.1%    1.2%  v8::internal::FieldType::None(v8::internal::Isolate*)
+      1    1.1%    1.2%  v8::internal::EternalHandles::Create(v8::internal::Isolate*, v8::internal::Object*, int*)
+      1    1.1%    1.2%  v8::internal::AstValueFactory::GetString(unsigned int, bool, v8::internal::Vector<unsigned char const>)
+      1    1.1%    1.2%  v8::internal::AstValueFactory::GetOneByteStringInternal(v8::internal::Vector<unsigned char const>)
+      1    1.1%    1.2%  v8::internal::(anonymous namespace)::ProbeInstantiationsCache(v8::internal::Isolate*, int, v8::internal::(anonymous namespace)::CachingMode)
+      1    1.1%    1.2%  sem_wait
+      1    1.1%    1.2%  operator new(unsigned long)
+      1    1.1%    1.2%  __lll_lock_wait
+      1    1.1%    1.2%  __libc_malloc
+      1    1.1%    1.2%  __GI___pthread_mutex_lock
+      1    1.1%    1.2%  _IO_default_xsputn
+
+ [Summary]:
+   ticks  total  nonlib   name
+      4    4.5%    4.7%  JavaScript
+     76   85.4%   88.4%  C++
+      2    2.2%    2.3%  GC
+      3    3.4%          Shared libraries
+      6    6.7%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     34   56.7%   38.2%  v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     19   31.7%   21.3%  v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    3.3%    2.2%  v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.7%    1.1%  v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.7%    1.1%  v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.7%    1.1%  v8::internal::Runtime_KeyedLoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.7%    1.1%  v8::internal::Builtin_ObjectGetOwnPropertyNames(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.7%    1.1%  v8::internal::Builtin_ObjectGetOwnPropertyDescriptors(int, v8::internal::Object**, v8::internal::Isolate*)
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+     31   34.8%  node::(anonymous namespace)::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     31  100.0%    v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     31  100.0%      Function: ~runInThisContext bootstrap_node.js:495:28
+     31  100.0%        Function: ~NativeModule.compile bootstrap_node.js:584:44
+     31  100.0%          Function: ~NativeModule.require bootstrap_node.js:516:34
+      5   16.1%            Function: ~<anonymous> util.js:1:11
+      4   12.9%            Function: ~<anonymous> module.js:1:11
+      3    9.7%            Function: ~startup bootstrap_node.js:12:19
+      3    9.7%            Function: ~setupNextTick internal/process/next_tick.js:49:23
+      2    6.5%            Function: ~setupGlobalVariables bootstrap_node.js:251:32
+      2    6.5%            Function: ~setupGlobalConsole bootstrap_node.js:306:30
+      2    6.5%            Function: ~<anonymous> tty.js:1:11
+      1    3.2%            Function: ~setup_performance internal/process.js:11:27
+      1    3.2%            Function: ~setupGlobalTimeouts bootstrap_node.js:296:31
+      1    3.2%            Function: ~<anonymous> timers.js:1:11
+      1    3.2%            Function: ~<anonymous> stream.js:1:11
+      1    3.2%            Function: ~<anonymous> readline.js:1:11
+      1    3.2%            Function: ~<anonymous> net.js:1:11
+      1    3.2%            Function: ~<anonymous> internal/url.js:1:11
+      1    3.2%            Function: ~<anonymous> internal/loader/Loader.js:1:11
+      1    3.2%            Function: ~<anonymous> fs.js:1:11
+      1    3.2%            Function: ~<anonymous> _stream_readable.js:1:11
+
+      9   10.1%  write
+      2   22.2%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   50.0%      Function: ~onwrite _stream_writable.js:422:17
+      1  100.0%        Function: ~Socket._writeGeneric net.js:701:42
+      1  100.0%          Function: ~Socket._write net.js:778:35
+      1  100.0%            Function: ~doWrite _stream_writable.js:379:17
+      1   50.0%      Function: ~<anonymous> internal/encoding.js:1:11
+      1  100.0%        Function: ~NativeModule.compile bootstrap_node.js:584:44
+      1  100.0%          Function: ~NativeModule.require bootstrap_node.js:516:34
+      1  100.0%            Function: ~<anonymous> util.js:1:11
+
+      6    6.7%  UNKNOWN
+
+      3    3.4%  v8::internal::Deserializer::ReadData(v8::internal::Object**, v8::internal::Object**, int, unsigned char*)
+
+      3    3.4%  /lib/x86_64-linux-gnu/libc-2.19.so
+      1   33.3%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~startup bootstrap_node.js:12:19
+      1  100.0%        Function: ~<anonymous> bootstrap_node.js:10:10
+
+      2    2.2%  node::Binding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2  100.0%    v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   50.0%      Function: ~<anonymous> util.js:1:11
+      1  100.0%        Function: ~NativeModule.compile bootstrap_node.js:584:44
+      1  100.0%          Function: ~NativeModule.require bootstrap_node.js:516:34
+      1  100.0%            Function: ~setupGlobalVariables bootstrap_node.js:251:32
+      1   50.0%      Function: ~<anonymous> internal/util.js:1:11
+      1  100.0%        Function: ~NativeModule.compile bootstrap_node.js:584:44
+      1  100.0%          Function: ~NativeModule.require bootstrap_node.js:516:34
+      1  100.0%            Function: ~<anonymous> internal/encoding.js:1:11
+
+      2    2.2%  _IO_vfprintf
+      2  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   50.0%      Function: ~__dirname perf_hooks.js:195:17
+      1  100.0%        Function: ~Performance perf_hooks.js:316:14
+      1  100.0%          Function: ~<anonymous> perf_hooks.js:1:11
+      1  100.0%            Function: ~NativeModule.compile bootstrap_node.js:584:44
+      1   50.0%      Function: ~Writable.write _stream_writable.js:264:36
+      1  100.0%        Function: ~Socket.write net.js:692:34
+      1  100.0%          Function: ~write console.js:90:15
+      1  100.0%            Function: ~log console.js:124:37
+
+      1    1.1%  v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterTransfer(v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo*, v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo*)
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~Module._compile module.js:581:37
+      1  100.0%        Function: ~Module._extensions..js module.js:633:37
+      1  100.0%          Function: ~Module.load module.js:536:33
+      1  100.0%            Function: ~tryModuleLoad module.js:505:23
+
+      1    1.1%  v8::internal::interpreter::BytecodeRegisterOptimizer::Flush()
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~DoJoin native array.js:95:16
+      1  100.0%        Function: ~Join native array.js:120:14
+      1  100.0%          Function: ~InnerArrayJoin native array.js:275:24
+      1  100.0%            Function: ~join native array.js:288:46
+
+      1    1.1%  v8::internal::interpreter::BytecodeGenerator::BuildLogicalTest(v8::internal::Token::Value, v8::internal::Expression*, v8::internal::Expression*)
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~startup bootstrap_node.js:12:19
+      1  100.0%        Function: ~<anonymous> bootstrap_node.js:10:10
+
+      1    1.1%  v8::internal::interpreter::BytecodeArrayWriter::MaybeElideLastBytecode(v8::internal::interpreter::Bytecode, bool) [clone .part.57]
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~Module.load module.js:536:33
+      1  100.0%        Function: ~tryModuleLoad module.js:505:23
+      1  100.0%          Function: ~Module._load module.js:443:24
+      1  100.0%            Function: ~Module.runMain module.js:663:26
+
+      1    1.1%  v8::internal::TransitionArray::SearchTransition(v8::internal::Map*, v8::internal::PropertyKind, v8::internal::Name*, v8::internal::PropertyAttributes)
+      1  100.0%    v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~protoGetter net.js:643:21
+      1  100.0%        Function: ~<anonymous> net.js:1:11
+      1  100.0%          Function: ~NativeModule.compile bootstrap_node.js:584:44
+      1  100.0%            Function: ~NativeModule.require bootstrap_node.js:516:34
+
+      1    1.1%  v8::internal::Scope::num_parameters() const
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~onParseComplete internal/url.js:199:25
+      1  100.0%        node::url::Parse(v8::FunctionCallbackInfo<v8::Value> const&)
+      1  100.0%          Function: ~parse internal/url.js:225:15
+      1  100.0%            Function: ~URL internal/url.js:304:14
+
+      1    1.1%  v8::internal::Scope::LookupRecursive(v8::internal::VariableProxy*, v8::internal::Scope*)
+
+      1    1.1%  v8::internal::Scanner::ScanIdentifierOrKeyword()
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~<anonymous> bootstrap_node.js:10:10
+
+      1    1.1%  v8::internal::Scanner::PeekAhead()
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~inspect util.js:287:17
+      1  100.0%        Function: ~format util.js:179:16
+      1  100.0%          Function: ~log console.js:124:37
+      1  100.0%            node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+
+      1    1.1%  v8::internal::Scanner::CurrentSymbol(v8::internal::AstValueFactory*) const
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~setupInspector bootstrap_node.js:321:26
+      1  100.0%        Function: ~setupGlobalConsole bootstrap_node.js:306:30
+      1  100.0%          Function: ~startup bootstrap_node.js:12:19
+      1  100.0%            Function: ~<anonymous> bootstrap_node.js:10:10
+
+      1    1.1%  v8::internal::ParserBase<v8::internal::Parser>::ParseUnaryExpression(bool*)
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~realpathSync fs.js:1580:40
+      1  100.0%        Function: ~toRealPath module.js:153:20
+      1  100.0%          Function: ~Module._findPath module.js:172:28
+      1  100.0%            Function: ~Module._resolveFilename module.js:517:35
+
+      1    1.1%  v8::internal::ParserBase<v8::internal::Parser>::ParsePrimaryExpression(bool*, bool*)
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~set native collection.js:149:4
+      1  100.0%        Function: ~E internal/errors.js:93:11
+      1  100.0%          Function: ~<anonymous> internal/errors.js:1:11
+      1  100.0%            Function: ~NativeModule.compile bootstrap_node.js:584:44
+
+      1    1.1%  v8::internal::ParserBase<v8::internal::Parser>::ParseAssignmentExpression(bool, bool*)
+      1  100.0%    v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~Writable _stream_writable.js:194:18
+      1  100.0%        Function: ~Duplex _stream_duplex.js:44:16
+      1  100.0%          Function: ~Socket net.js:178:16
+      1  100.0%            Function: ~WriteStream tty.js:67:21
+
+      1    1.1%  v8::internal::ParserBase<v8::internal::Parser>::Expect(v8::internal::Token::Value, bool*)
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~Module.runMain module.js:663:26
+      1  100.0%        Function: ~startup bootstrap_node.js:12:19
+      1  100.0%          Function: ~<anonymous> bootstrap_node.js:10:10
+
+      1    1.1%  v8::internal::Object::AddDataProperty(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::ShouldThrow, v8::internal::Object::StoreFromKeyed)
+      1  100.0%    v8::internal::Builtin_ObjectGetOwnPropertyDescriptors(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~promisify internal/util.js:204:19
+      1  100.0%        Function: ~<anonymous> internal/loader/resolveRequestUrl.js:1:11
+      1  100.0%          Function: ~NativeModule.compile bootstrap_node.js:584:44
+      1  100.0%            Function: ~NativeModule.require bootstrap_node.js:516:34
+
+      1    1.1%  v8::internal::LookupIterator::State v8::internal::LookupIterator::LookupInRegularHolder<false>(v8::internal::Map*, v8::internal::JSReceiver*) [clone .part.72]
+      1  100.0%    v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~WritableState _stream_writable.js:41:23
+      1  100.0%        Function: ~Writable _stream_writable.js:194:18
+      1  100.0%          Function: ~Duplex _stream_duplex.js:44:16
+      1  100.0%            Function: ~Socket net.js:178:16
+
+      1    1.1%  v8::internal::KeyedLoadIC::Load(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>) [clone .constprop.211]
+      1  100.0%    v8::internal::Runtime_KeyedLoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~<anonymous> _stream_writable.js:1:11
+      1  100.0%        Function: ~NativeModule.compile bootstrap_node.js:584:44
+      1  100.0%          Function: ~NativeModule.require bootstrap_node.js:516:34
+      1  100.0%            Function: ~<anonymous> stream.js:1:11
+
+      1    1.1%  v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+      1  100.0%    v8::internal::Builtin_ObjectGetOwnPropertyNames(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~copyProps internal/safe_globals.js:3:19
+      1  100.0%        Function: ~makeSafe internal/safe_globals.js:15:18
+      1  100.0%          Function: ~<anonymous> internal/safe_globals.js:1:11
+      1  100.0%            Function: ~NativeModule.compile bootstrap_node.js:584:44
+
+      1    1.1%  v8::internal::FieldType::None(v8::internal::Isolate*)
+      1  100.0%    v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~<anonymous> internal/module.js:1:11
+      1  100.0%        Function: ~NativeModule.compile bootstrap_node.js:584:44
+      1  100.0%          Function: ~NativeModule.require bootstrap_node.js:516:34
+      1  100.0%            Function: ~<anonymous> module.js:1:11
+
+      1    1.1%  v8::internal::EternalHandles::Create(v8::internal::Isolate*, v8::internal::Object*, int*)
+
+      1    1.1%  v8::internal::AstValueFactory::GetString(unsigned int, bool, v8::internal::Vector<unsigned char const>)
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~EventEmitter events.js:26:22
+      1  100.0%        Function: ~startup bootstrap_node.js:12:19
+      1  100.0%          Function: ~<anonymous> bootstrap_node.js:10:10
+
+      1    1.1%  v8::internal::AstValueFactory::GetOneByteStringInternal(v8::internal::Vector<unsigned char const>)
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~setupNextTick internal/process/next_tick.js:49:23
+      1  100.0%        Function: ~startup bootstrap_node.js:12:19
+      1  100.0%          Function: ~<anonymous> bootstrap_node.js:10:10
+
+      1    1.1%  v8::internal::(anonymous namespace)::ProbeInstantiationsCache(v8::internal::Isolate*, int, v8::internal::(anonymous namespace)::CachingMode)
+      1  100.0%    v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~runInThisContext bootstrap_node.js:495:28
+      1  100.0%        Function: ~NativeModule.compile bootstrap_node.js:584:44
+      1  100.0%          Function: ~NativeModule.require bootstrap_node.js:516:34
+      1  100.0%            Function: ~<anonymous> fs.js:1:11
+
+      1    1.1%  sem_wait
+
+      1    1.1%  operator new(unsigned long)
+      1  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~Buffer.allocUnsafe buffer.js:246:30
+      1  100.0%        Function: ~tryCreateBuffer fs.js:527:25
+      1  100.0%          Function: ~fs.readFileSync fs.js:551:27
+      1  100.0%            Function: ~Module._extensions..js module.js:633:37
+
+      1    1.1%  __lll_lock_wait
+
+      1    1.1%  __libc_malloc
+
+      1    1.1%  __GI___pthread_mutex_lock
+
+      1    1.1%  _IO_default_xsputn
+
+      1    1.1%  StoreIC: A store IC from the snapshot
+      1  100.0%    Function: ~_addListener events.js:232:22
+      1  100.0%      Function: ~addListener events.js:297:58
+      1  100.0%        Function: ~setupSignalHandlers internal/process.js:187:29
+      1  100.0%          Function: ~startup bootstrap_node.js:12:19
+      1  100.0%            Function: ~<anonymous> bootstrap_node.js:10:10
+
+      1    1.1%  Function: ~NativeModule.exists bootstrap_node.js:550:33
+      1  100.0%    Function: ~NativeModule.nonInternalExists bootstrap_node.js:561:46
+      1  100.0%      Function: ~Module._resolveFilename module.js:517:35
+      1  100.0%        Function: ~Module._load module.js:443:24
+      1  100.0%          Function: ~Module.runMain module.js:663:26
+      1  100.0%            Function: ~startup bootstrap_node.js:12:19
+
+      1    1.1%  Function: ~<anonymous> assert.js:1:11
+      1  100.0%    Function: ~NativeModule.compile bootstrap_node.js:584:44
+      1  100.0%      Function: ~NativeModule.require bootstrap_node.js:516:34
+      1  100.0%        Function: ~<anonymous> timers.js:1:11
+      1  100.0%          Function: ~NativeModule.compile bootstrap_node.js:584:44
+      1  100.0%            Function: ~NativeModule.require bootstrap_node.js:516:34
+
+      1    1.1%  Builtin: InterpreterEntryTrampoline
+      1  100.0%    Function: ~NativeModule.require bootstrap_node.js:516:34
+      1  100.0%      Function: ~<anonymous> internal/url.js:1:11
+      1  100.0%        Function: ~NativeModule.compile bootstrap_node.js:584:44
+      1  100.0%          Function: ~NativeModule.require bootstrap_node.js:516:34
+      1  100.0%            Function: ~<anonymous> module.js:1:11
+
