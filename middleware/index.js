@@ -1,4 +1,4 @@
-module.exports = (app, express) => {
+  const express = require('express');
   const path = require('path');
   const logger = require('morgan');
   const favicon = require('serve-favicon');
@@ -8,6 +8,8 @@ module.exports = (app, express) => {
   const bodyParser = require('body-parser');
   const config = require('../config');
   const index = require('../routes');
+
+  const app = express();
 
   // Page Rendering
   app.set('views', path.join(__dirname, '../views'));
@@ -75,4 +77,5 @@ module.exports = (app, express) => {
       error: { },
     });
   });
-};
+
+module.exports = app;
