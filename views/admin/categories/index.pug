@@ -2,14 +2,13 @@ extends ../../layouts/admin
 
 block content
   section.section-padding
-    .container
-      .row
-        hr.bottom-line
-        .card.mb-3
+      hr.bottom-line
+      .card.mb-3
+        .card-block
           .card-header
             i.fa.fa-table 
             |  #{title}
-            
+            a(href='/admin/category/create' class='float-right btn btn-success') Create new
           .card-body
             .table-responsive
               table#dataTable.table.table-bordered(width='100%', cellspacing='0')
@@ -21,12 +20,13 @@ block content
                 tbody
                   - var i = 0
 
-                  each val in posts
-                    - var ref = "blog/" + val._id
+                  each category in categories
                     - i++
                     tr
                       td= i
                       td 
-                        a.alist(href=ref)= val.title
-                      td Edit
-                      td Delete
+                        a(href=category.url) #{category.name}
+                      td
+                        a(href=category.url+'/update' class="btn btn-warning") Edit
+                      td
+                        a(href=category.url+'/delete' class="btn btn-danger") Delete
