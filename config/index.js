@@ -10,7 +10,7 @@ module.exports = {
                  // If not connected, return errors immediately rather than waiting for reconnect
                  bufferMaxEntries: 0,
                  promiseLibrary: global.Promise,
-                 autoReconnect: true, 
+                 autoReconnect: true,
               },
         aclCollectionPrefix: process.env.ACL_COLLECTION_PREFIX
     },
@@ -38,13 +38,13 @@ module.exports = {
         clientSecret: process.env.GITHUB_CLIENT_SECRET,
         callbackURL: "http://127.0.0.1:3000/auth/github/callback"
       },
-    
+
     linkedin: {
         clientID: process.env.LINKEDIN_CLIENT_ID,
         clientSecret: process.env.LINKEDIN_CLIENT_ID,
         callbackURL: "http://127.0.0.1:3000/auth/linkedin/callback"
       },
-    
+
     twitter: {
       consumerKey: process.env.TWITTER_CONSUMER_KEY,
       consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
@@ -68,6 +68,9 @@ module.exports = {
       smtpUser: process.env.SMTP_USER,
       smtpPass: process.env.SMTP_PASSWORD
     },
-
-
+    pusher: {
+      appId: process.env.PUSHER_ID,
+      key: process.env.PUSHER_KEY,
+      secret: process.env.PUSHER_SECRET,
+    },
 };
