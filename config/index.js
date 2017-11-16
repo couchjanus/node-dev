@@ -17,7 +17,7 @@ module.exports = {
     // },
 
     db: {
-        uri: "mongodb://couchjanus:Bdfyghbdtn1@ds111066.mlab.com:11066/coolsite",
+        uri: process.env.MONGOLAB_URI,
         options:{
                  useMongoClient: true,
                  autoIndex: false, // Don't build indexes
