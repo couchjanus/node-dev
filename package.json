@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/couchjanus/node-dev#readme",
   "engines": {
-    "node": "8.9.1"
+    "node": "8.9.1",
+    "npm":  "5.5.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

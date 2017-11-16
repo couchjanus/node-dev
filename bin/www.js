@@ -1,5 +1,5 @@
 const app = require('../middleware');
-const config = require('../config');
+// const config = require('../config');
 
 const debug = require('debug')('node-dev:server');
 
