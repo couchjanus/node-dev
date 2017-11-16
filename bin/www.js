@@ -1,11 +1,11 @@
 const app = require('../middleware');
 // const config = require('../config');
 
-const debug = require('debug')('node-dev:server');
+// const debug = require('debug')('node-dev:server');
 
 const port = normalizePort(process.env.APP_PORT || 3000);
 
-app.set('port', port);
+app.set('port', (process.env.PORT || 3000));
 
 app.listen(port, (err) => {
   if (err) {
