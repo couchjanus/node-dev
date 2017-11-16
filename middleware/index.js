@@ -52,7 +52,7 @@ const path = require('path');
     saveUninitialized: true,
     secret: config.session.secret,
     key: config.session.key,
-    store: new MongoStore({ url: process.env.PROD_MONGODB, autoReconnect: true, clear_interval: 3600 }),
+    store: new MongoStore({ url: process.env.MONGODB_URI, autoReconnect: true, clear_interval: 3600 }),
     cookie: {
       httpOnly: true,
       maxAge: 1000 * 60 * 60,

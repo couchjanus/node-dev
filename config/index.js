@@ -17,7 +17,7 @@ module.exports = {
     // },
 
     db: {
-        uri: process.env.PROD_MONGODB,
+        uri: process.env.MONGODB_URI,
         options:{
                  useMongoClient: true,
                  autoIndex: false, // Don't build indexes
