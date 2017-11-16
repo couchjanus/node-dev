@@ -4,10 +4,6 @@ const config = require('../config');
 // using promises
 mongoose.Promise = global.Promise;
 
-var uri = 'mongodb://user:pass@host:port/db';
-mongodb.MongoClient.connect(uri, { server: { auto_reconnect: true } }, function (err, db) {
-    /* adventure! */
-});
 
 mongoose.connect(process.env.MONGOLAB_URI, config.db.options)
   .then(() => {
