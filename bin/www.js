@@ -13,7 +13,7 @@ app.listen(port, (err) => {
   if (err) {
     return console.log('something bad happened', err);
   }
-  console.log(`Server running at http://${process.env.APP_HOST}:${port}/`);
+  // console.log(`Server running at http://${process.env.APP_HOST}:${port}/`);
 });
 
 // app.on('error', onError);
