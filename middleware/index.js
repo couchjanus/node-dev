@@ -1,6 +1,6 @@
 const path = require('path');
 
-require('dotenv').config({path:__dirname+'/../.env.dev'});
+require('dotenv').config({path:__dirname+'/../.env'});
 
   const express = require('express');
 
@@ -12,7 +12,7 @@ require('dotenv').config({path:__dirname+'/../.env.dev'});
   const bodyParser = require('body-parser');
   const multer = require('multer');
   const config = require('../config');
-  // const aclify = require('aclify');
+
   const mongoose = require('../database/db');
   const index = require('../routes');
   const MongoStore = require('connect-mongodb-session')(session);
