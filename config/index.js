@@ -56,29 +56,29 @@ module.exports = {
     //     clientSecret: process.env.GITHUB_CLIENT_SECRET,
     //     callbackURL: "http://127.0.0.1:3000/auth/github/callback"
     //   },
-    //
+
     // linkedin: {
     //     clientID: process.env.LINKEDIN_CLIENT_ID,
     //     clientSecret: process.env.LINKEDIN_CLIENT_ID,
     //     callbackURL: "http://127.0.0.1:3000/auth/linkedin/callback"
     //   },
-    //
-    // twitter: {
-    //   consumerKey: process.env.TWITTER_CONSUMER_KEY,
-    //   consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
-    //   callbackURL: "http://127.0.0.1:3000/auth/twitter/callback"
-    //   },
-    //
-    // facebook: {
-    //   clientID: process.env.FACEBOOK_CLIENT_ID,
-    //   clientSecret: process.env.FACEBOOK_CLIENT_ID,
-    //   callbackURL: "http://localhost:3000/auth/facebook/callback"
-    //   },
-    // google: {
-    //   clientID: process.env.GOOGLE_CLIENT_ID,
-    //   clientSecret: process.env.GOOGLE_CLIENT_ID,
-    //   callbackURL: "http://localhost:3000/auth/facebook/callback"
-    //   },
+
+    twitter: {
+      consumerKey: "KjQTUCheXVlGfD0dNi7CiR11T", //process.env.TWITTER_CONSUMER_KEY,
+      consumerSecret: "IwVtKmFLjavv9doWodA3ShwPm2Qe1KnTkM4k7hxAaGM4A34Vxp", //process.env.TWITTER_CONSUMER_SECRET,
+      callbackURL: "http://127.0.0.1:3000/auth/twitter/callback"
+      },
+
+    facebook: {
+      clientID: "896605267054808",//process.env.FACEBOOK_CLIENT_ID,
+      clientSecret: "28f6a7d2842d5f9ba19e449131694902",//process.env.FACEBOOK_CLIENT_ID,
+      callbackURL: "http://localhost:3000/auth/facebook/callback"
+      },
+    google: {
+      clientID: "262575533252-sviar9bm39g5c4dnlb6erkpvjme4hit2.apps.googleusercontent.com",//process.env.GOOGLE_CLIENT_ID,
+      clientSecret: "1K1fRgOmy1WJK4_Z8ycGRyuz",//process.env.GOOGLE_CLIENT_ID,
+      callbackURL: "http://localhost:3000/auth/facebook/callback"
+      },
     transport: {
       smtpHost: "smtp.gmail.com", //process.env.SMTP_HOST,
       smtpPort: 465, //process.env.SMTP_PORT,
