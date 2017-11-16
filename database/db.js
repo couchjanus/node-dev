@@ -5,7 +5,7 @@ const config = require('../config');
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
-  config.db.uri, config.db.options)
+  "mongodb://couchjanus:Bdfyghbdtn1@ds111066.mlab.com:11066/coolsite", config.db.options)
   .then(() => {
     /** ready to use. The `mongoose.connect()` promise resolves to undefined. */
     console.log('connection succesful');
