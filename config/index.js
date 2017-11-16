@@ -1,6 +1,23 @@
 module.exports = {
+
+    // db: {
+    //     uri: process.env.DB_CONNECTION + '/' +  process.env.DB_NAME,
+    //     options:{
+    //              useMongoClient: true,
+    //              autoIndex: false, // Don't build indexes
+    //              reconnectTries: Number.MAX_VALUE, // Never stop trying to reconnect
+    //              reconnectInterval: 500, // Reconnect every 500ms
+    //              poolSize: 10, // Maintain up to 10 socket connections
+    //              // If not connected, return errors immediately rather than waiting for reconnect
+    //              bufferMaxEntries: 0,
+    //              promiseLibrary: global.Promise,
+    //              autoReconnect: true,
+    //           },
+    //     aclCollectionPrefix: process.env.ACL_COLLECTION_PREFIX
+    // },
+
     db: {
-        uri: process.env.DB_CONNECTION + '/' +  process.env.DB_NAME,
+        uri: "mongodb://couchjanus:Bdfyghbdtn1@ds111066.mlab.com:11066",
         options:{
                  useMongoClient: true,
                  autoIndex: false, // Don't build indexes
@@ -12,25 +29,26 @@ module.exports = {
                  promiseLibrary: global.Promise,
                  autoReconnect: true,
               },
-        aclCollectionPrefix: process.env.ACL_COLLECTION_PREFIX
+        aclCollectionPrefix:"acl_"
+         // process.env.ACL_COLLECTION_PREFIX
     },
     email: {
-        apiKey: process.env.SENDGRID_API_KEY,
-        sendFrom: process.env.SEND_EMAILS_FROM
+        apiKey: "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",//process.env.SENDGRID_API_KEY,
+        sendFrom: "couchjanus@gmail.com", //process.env.SEND_EMAILS_FROM
     },
     login: {
-        maxAttempts: process.env.MAX_LOGIN_ATTEMPTS,
-        lockoutHours: process.env.LOGIN_ATTEMPTS_LOCKOUT_HOURS * 60 * 60 * 1000,
-        minimumPasswordLength: process.env.MINIMUM_PASSWORD_LENGTH,
-        passwordResetTimeLimitInHours: process.env.PASSWORD_RESET_TIME_LIMIT_IN_HOURS,
-        passwordHashRounds: parseInt(process.env.PASSWORD_HASH_ROUNDS, 10)
+        maxAttempts: 3,// process.env.MAX_LOGIN_ATTEMPTS,
+        lockoutHours: 60 * 60 * 1000, //process.env.LOGIN_ATTEMPTS_LOCKOUT_HOURS * 60 * 60 * 1000,
+        minimumPasswordLength: 6, //process.env.MINIMUM_PASSWORD_LENGTH,
+        passwordResetTimeLimitInHours:1, //process.env.PASSWORD_RESET_TIME_LIMIT_IN_HOURS,
+        passwordHashRounds:1, //parseInt(process.env.PASSWORD_HASH_ROUNDS, 10)
     },
     server: {
-        timezone: process.env.TZ
+        timezone: "Europe/Kiev" //process.env.TZ
     },
     session: {
-        name: process.env.SESSION_NAME,
-        secret: process.env.SESSION_SECRET
+        name: "collsite", //process.env.SESSION_NAME,
+        secret: "supersecret"//process.env.SESSION_SECRET
     },
 
     github: {
@@ -62,15 +80,22 @@ module.exports = {
       callbackURL: "http://localhost:3000/auth/facebook/callback"
       },
     transport: {
-      smtpHost: process.env.SMTP_HOST,
-      smtpPort: process.env.SMTP_PORT,
+      smtpHost: "smtp.gmail.com", //process.env.SMTP_HOST,
+      smtpPort: 465, //process.env.SMTP_PORT,
       smtpSecure: true,
-      smtpUser: process.env.SMTP_USER,
-      smtpPass: process.env.SMTP_PASSWORD
+      smtpUser: "janusnic@gmail.com", //process.env.SMTP_USER,
+      smtpPass: "egpifjiaqkndnisq", //process.env.SMTP_PASSWORD
     },
+
+    // SMTP_HOST = smtp.gmail.com
+    // SMTP_PORT = 465
+    // SMTP_USER = janusnic@gmail.com
+    // SMTP_PASSWORD = egpifjiaqkndnisq
+
+
     pusher: {
-      appId: process.env.PUSHER_ID,
-      key: process.env.PUSHER_KEY,
-      secret: process.env.PUSHER_SECRET,
+      appId: "430057",//process.env.PUSHER_ID,
+      key: "1aae17139b6f62752b02",//process.env.PUSHER_KEY,
+      secret: "e5b2eb185327789a9405"//process.env.PUSHER_SECRET,
     },
 };
