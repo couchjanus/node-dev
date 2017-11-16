@@ -29,7 +29,7 @@ require('dotenv').config({path:__dirname+'/../.env'});
   app.set('view engine', 'pug');
 
   // Favicon
-  app.use(favicon(path.join(__dirname, '../public', 'favicon.ico')));
+  // app.use(favicon(path.join(__dirname, '../public', 'favicon.ico')));
 
   // Logger
   if (app.get('env') === 'development') {
